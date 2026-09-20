@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Find Clinic - MyPatientHUB</title>
+
+    <link
+        rel="stylesheet"
+        href="find-pages.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="page-header">
+
+        <div class="logo">
+            MyPatientHUB
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>
+            Find a Clinic
+        </h1>
+
+        <p>
+            Find clinics and healthcare centers near you.
+        </p>
+
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="clinicName"
+                placeholder="Clinic name"
+            >
+
+
+            <input
+                type="text"
+                id="clinicLocation"
+                placeholder="Location"
+            >
+
+
+            <button onclick="clinicSearch()">
+                SEARCH
+            </button>
+
+        </div>
+
+    </section>
+
+    <main class="find-container">
+
+
+        <div class="page-buttons">
+
+            <button
+                class="active-btn"
+                onclick="showClinicList()"
+            >
+                LIST
+            </button>
+
+
+            <button
+                onclick="showClinicMap()"
+            >
+                MAP
+            </button>
+
+        </div>
+
+
+        <div class="content-area">
+            <aside class="filter-box">
+
+                <h3>
+                    Filter
+                </h3>
+
+
+                <label>
+                    Clinic Type
+                </label>
+
+                <select>
+
+                    <option>
+                        All Clinics
+                    </option>
+
+                    <option>
+                        General Clinic
+                    </option>
+
+                    <option>
+                        Dental Clinic
+                    </option>
+
+                    <option>
+                        Medical Center
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Availability
+                </label>
+
+                <select>
+
+                    <option>
+                        Any Time
+                    </option>
+
+                    <option>
+                        Open Now
+                    </option>
+
+                    <option>
+                        Today
+                    </option>
+
+                </select>
+
+            </aside>
+            <section
+                class="results"
+                id="clinicResults"
+            >
+
+                <div class="clinic-card">
+
+                    <div class="clinic-image">
+                        🏥
+                    </div>
+
+
+                    <div class="clinic-info">
+
+                        <h2>
+                            Klinik Lee Healthcare
+                        </h2>
+
+                        <p>
+                            General Clinic
+                        </p>
+
+                        <p>
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p>
+                            4.7 / 5
+                        </p>
+
+                        <span>
+                            Open Today
+                        </span>
+
+
+                        <button>
+                            VIEW CLINIC
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="clinic-card">
+
+                    <div class="clinic-image">
+                        🏥
+                    </div>
+
+
+                    <div class="clinic-info">
+
+                        <h2>
+                            Klinik Nilai Impian
+                        </h2>
+
+                        <p>
+                            Medical Center
+                        </p>
+
+                        <p>
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p>
+                            4.6 / 5
+                        </p>
+
+                        <span>
+                            Open Today
+                        </span>
+
+
+                        <button>
+                            VIEW CLINIC
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section
+                class="map-container"
+                id="clinicMap"
+            >
+
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=69.10%2C34.50%2C69.25%2C34.60&layer=mapnik"
+                    width="100%"
+                    height="500"
+                    frameborder="0"
+                >
+                </iframe>
+
+            </section>
+
+        </div>
+
+        <section class="services">
+
+            <h2>
+                Clinic Services
+            </h2>
+
+
+            <div class="service-grid">
+
+                <div>
+                    General Treatment
+                </div>
+
+                <div>
+                    Laboratory
+                </div>
+
+                <div>
+                    Pharmacy
+                </div>
+
+                <div>
+                    Emergency Care
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 MyPatientHUB
+        </p>
+
+    </footer>
+
+
+    <script src="find-pages.js"></script>
+
+</body>
+
+</html>

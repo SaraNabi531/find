@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Find Doctor - MyPatientHUB</title>
+
+    <link
+        rel="stylesheet"
+        href="find-pages.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="page-header">
+
+        <div class="logo">
+            MyPatientHUB
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+    <section class="hero">
+
+        <h1>Find a Doctor</h1>
+
+        <p>
+            Find the right doctor for your healthcare needs.
+        </p>
+
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="doctorName"
+                placeholder="Doctor name"
+            >
+
+
+            <input
+                type="text"
+                id="doctorLocation"
+                placeholder="Location"
+            >
+
+
+            <button onclick="doctorSearch()">
+                SEARCH
+            </button>
+
+        </div>
+
+    </section>
+
+    <main class="find-container">
+
+
+        <div class="page-buttons">
+
+            <button
+                class="active-btn"
+                onclick="showDoctorList()"
+            >
+                LIST
+            </button>
+
+
+            <button
+                onclick="showDoctorMap()"
+            >
+                MAP
+            </button>
+
+        </div>
+
+
+        <div class="content-area">
+
+            <aside class="filter-box">
+
+                <h3>Filter</h3>
+
+
+                <label>
+                    Specialty
+                </label>
+
+                <select>
+
+                    <option>
+                        All Specialties
+                    </option>
+
+                    <option>
+                        Cardiologist
+                    </option>
+
+                    <option>
+                        Dentist
+                    </option>
+
+                    <option>
+                        General Doctor
+                    </option>
+
+                    <option>
+                        Dermatologist
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Gender
+                </label>
+
+                <select>
+
+                    <option>
+                        Any
+                    </option>
+
+                    <option>
+                        Male
+                    </option>
+
+                    <option>
+                        Female
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Availability
+                </label>
+
+                <select>
+
+                    <option>
+                        Any Time
+                    </option>
+
+                    <option>
+                        Today
+                    </option>
+
+                    <option>
+                        Tomorrow
+                    </option>
+
+                </select>
+
+            </aside>
+
+            <section
+                class="results"
+                id="doctorResults"
+            >
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        DR
+                    </div>
+
+
+                    <div class="doctor-info">
+
+                        <h2>
+                            Dr. Allan
+                        </h2>
+
+                        <p>
+                            Cardiologist
+                        </p>
+
+                        <p>
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p>
+                            4.9 / 5
+                        </p>
+
+                        <span>
+                            Available Today
+                        </span>
+
+
+                        <button onclick="findDoctor()">
+                            VIEW PROFILE
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        DR
+                    </div>
+
+
+                    <div class="doctor-info">
+
+                        <h2>
+                            Dr. Sarah
+                        </h2>
+
+                        <p>
+                            General Doctor
+                        </p>
+
+                        <p>
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p>
+                            4.8 / 5
+                        </p>
+
+                        <span>
+                            Available Tomorrow
+                        </span>
+
+
+                        <button onclick="findDoctor()">
+                            VIEW PROFILE
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section
+                class="map-container"
+                id="doctorMap"
+            >
+
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=69.10%2C34.50%2C69.25%2C34.60&layer=mapnik"
+                    width="100%"
+                    height="500"
+                    frameborder="0"
+                >
+                </iframe>
+
+            </section>
+
+        </div>
+
+        <section class="services">
+
+            <h2>
+                Special Services
+            </h2>
+
+
+            <div class="service-grid">
+
+                <div>
+                    Emergency
+                </div>
+
+                <div>
+                    Online Consultation
+                </div>
+
+                <div>
+                    Home Visit
+                </div>
+
+                <div>
+                    Pediatric Care
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="specialty">
+
+            <h2>
+                Find Doctors By Specialty
+            </h2>
+
+
+            <div class="specialty-buttons">
+
+                <button>
+                    Cardiologist
+                </button>
+
+                <button>
+                    Dentist
+                </button>
+
+                <button>
+                    Dermatologist
+                </button>
+
+                <button>
+                    Pediatrician
+                </button>
+
+                <button>
+                    General Doctor
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 MyPatientHUB
+        </p>
+
+    </footer>
+
+
+    <script src="find-pages.js"></script>
+
+</body>
+
+</html>
